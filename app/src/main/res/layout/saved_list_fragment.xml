@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/layout_toolbar"/>
+
+        <LinearLayout
+
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <EditText
+                android:id="@+id/filter_editext"
+                android:textSize="14dp"
+                android:text=""
+                android:singleLine="true"
+                android:maxLines="1"
+                android:minLines="1"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:textColor="@android:color/white"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:background="@color/colorPrimary"
+                android:id="@+id/scan_barcode"
+                android:text="@string/scan"
+                android:textAllCaps="true"
+                 android:textStyle="bold" />
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="30dp"
+                />
+
+            <Button
+                android:id="@+id/scan_rfid"
+                android:textColor="@android:color/white"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:background="@color/colorPrimary"
+                android:text="@string/scan_rfid"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <Button
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/upload"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/upload"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:visibility="gone"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="32dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/no_data"
+        android:text="@string/no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+</RelativeLayout>
